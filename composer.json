@@ -1,0 +1,32 @@
+{
+  "name": "inchoodev/lmeqp",
+  "description": "Tools for static testing Magento code",
+  "version": "1.0.0",
+  "type": "phpcodesniffer-standard",
+  "license": "MIT",
+  "keywords": [
+    "phpunit",
+    "testing"
+  ],
+  "homepage": "https://github.com/magento/marketplace-eqp",
+  "support": {
+    "issues": "https://github.com/Inchoo/lmeqp/issues"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
+    "magento/marketplace-eqp": "1.0.5",
+    "squizlabs/php_codesniffer": "^2.0"
+  },
+  "scripts": {
+    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../inchoodev/lmeqp,../../magento/marketplace-eqp",
+    "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../inchoodev/lmeqp,../../magento/marketplace-eqp"
+  },
+  "repositories": {
+    "magento": {
+      "type": "vcs",
+      "url": "https://github.com/magento/marketplace-eqp.git",
+      "no-api": true
+    }
+  }
+}
